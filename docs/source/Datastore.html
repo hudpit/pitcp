@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='PIT_CP-model-Datastore'>/**
+</span> * ##Overview
+ * The datastore model. A datastore is a publicly accessible application that 
+ * will receive the data from the app.
+ */
+Ext.define('PIT_CP.model.Datastore', {
+    extend: 'Ext.data.Model',
+    
+<span id='PIT_CP-model-Datastore-property-fields'>    fields: [
+</span><span id='PIT_CP-model-Datastore-property-datastore_id'>    	/**
+</span>    	 * @property {number} datastore_id Primary Key for the Datastore
+    	 */
+        { name: 'datastore_id', type: 'int',useNull:true},
+<span id='PIT_CP-model-Datastore-property-datastore_title'>        /**
+</span>         * @property {string} datastore_title Title of the datastore
+         */
+        { name: 'datastore_title', type: 'string'},
+<span id='PIT_CP-model-Datastore-property-datastore_url'>        /**
+</span>         * @property {string} datastore_url The url to send the data to
+         */
+        { name: 'datastore_url', type: 'string'},
+<span id='PIT_CP-model-Datastore-property-user_id'>        /**
+</span>         * @property {number} user_id The user_id of the user who created it
+         * @type {String}
+         */
+        { name: 'user_id', type: 'int' }
+
+    ],
+<span id='PIT_CP-model-Datastore-cfg-idProperty'>    idProperty:'datastore_id'
+</span>});
+</pre>
+</body>
+</html>

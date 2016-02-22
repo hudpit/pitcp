@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='PIT_CP-store-UserLogin'>/**
+</span> * ##Overview
+ * An in-memory store to hold the model of the currently logged-in user.
+ */
+Ext.define('PIT_CP.store.UserLogin',{
+    extend:'Ext.data.Store',
+<span id='PIT_CP-store-UserLogin-cfg-model'>    model:'PIT_CP.model.User',
+</span><span id='PIT_CP-store-UserLogin-cfg-autoLoad'>    autoLoad:false,
+</span><span id='PIT_CP-store-UserLogin-cfg-proxy'>    proxy:{
+</span>    	type:'memory'
+    }
+});</pre>
+</body>
+</html>

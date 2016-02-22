@@ -1,0 +1,19 @@
+@include bootstrap-button-ui(
+	$ui:'bootstrap-primary-toolbar-small',
+	$background-color:$primary
+);
+
+@include bootstrap-button-ui(
+	$ui:'bootstrap-danger-toolbar-small',
+	$background-color:$danger
+);
+
+@include bootstrap-button-ui(
+	$ui:'bootstrap-success-toolbar-small',
+	$background-color:$success
+);
+
+@include bootstrap-button-ui(
+	$ui:'bootstrap-success-small',
+	$background-color:$success
+);

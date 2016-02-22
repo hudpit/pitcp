@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='PIT_CP-view-project-List'>/**
+</span> * A view to list every available {@link PIT_CP.model.Project}.
+ * {@img shots/region-list.png Project List}
+ */
+Ext.define('PIT_CP.view.project.List',{
+	extend:'Ext.view.View',
+	alias:'widget.projectlist',
+<span id='PIT_CP-view-project-List-cfg-store'>	store:'Projects',
+</span><span id='PIT_CP-view-project-List-cfg-tpl'>	tpl:[
+</span>		'&lt;table class=&quot;table table-striped table-hover&quot;&gt;',
+		'&lt;tr&gt;',
+		'	&lt;th&gt;Region Name&lt;/th&gt;',
+		'	&lt;th&gt;Setup Key&lt;/th&gt;',
+		'	&lt;th&gt;&lt;/th&gt;',
+		'&lt;/tr&gt;',
+		'&lt;tpl for=&quot;.&quot;&gt;',
+		'&lt;tr class=&quot;project&quot;&gt;',
+		'	&lt;td&gt;{project_title}&lt;/td&gt;',
+		'	&lt;td&gt;{setup_key}&lt;/td&gt;',
+		'	&lt;td&gt;&lt;button class=&quot;btn btn-primary&quot; data-project_id=&quot;{project_id}&quot;&gt;View Region&lt;/button&gt;&lt;/td&gt;',
+		'&lt;/tr&gt;',
+		'&lt;/tpl&gt;',
+		'&lt;/table&gt;'
+	].join(''),
+<span id='PIT_CP-view-project-List-cfg-itemSelector'>	itemSelector:'tr.project',
+</span><span id='PIT_CP-view-project-List-cfg-autoScroll'>	autoScroll:true,
+</span><span id='PIT_CP-view-project-List-method-initComponent'>	initComponent:function(){
+</span>		var me = this;
+		me.addListener({
+			element:'el',
+			click:function(e, btn){me.fireEvent('projectbtnclick', btn.getAttribute('data-project_id'))},
+			delegate:'button'
+		});
+
+		me.callParent(arguments);
+	}
+})</pre>
+</body>
+</html>

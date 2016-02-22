@@ -1,0 +1,19 @@
+[
+    {
+        "title": "Guides",
+        "items": [
+            {
+                "name": "control_panel",
+                "url": "guides/control_panel",
+                "title": "Control Panel",
+                "description": "Control Panel Documentation"
+            },
+            {
+                "name":"geocoder",
+                "url":"guides/geocoder",
+                "title":"Geocoder",
+                "description":"Geocoder Documentation"
+            }
+        ]
+    }
+]

@@ -1,0 +1,7 @@
+form.login, form.forgotpw, form.resetpw{
+	max-width: 300px;
+	margin:0 auto;
+}
+form.logout{
+	margin: 5px;
+}

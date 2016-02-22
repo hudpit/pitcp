@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='PIT_CP-model-User'>/**
+</span> * ##Overview
+ * The User model. All count volunteers are *Users*.  This includes anyone 
+ * with login access to the app itself.
+ */
+Ext.define('PIT_CP.model.User', {
+    extend: 'Ext.data.Model',
+    
+<span id='PIT_CP-model-User-property-fields'>    fields: [
+</span><span id='PIT_CP-model-User-property-user_id'>        /**
+</span>         * @property {number} user_id The primary key of the User
+         */
+        { name: 'user_id', type: 'int' },
+<span id='PIT_CP-model-User-property-fname'>        /**
+</span>         * @property {string} fname The first name of the User
+         */
+        { name: 'fname', type: 'string' },
+<span id='PIT_CP-model-User-property-lname'>        /**
+</span>         * @property {string} lname The last name of the User
+         */
+        { name: 'lname', type: 'string' },
+<span id='PIT_CP-model-User-property-email'>        /**
+</span>         * @property {string} email The email address of the User
+         */
+        { name: 'email', type: 'string' },
+<span id='PIT_CP-model-User-property-phone'>        /**
+</span>         * @property {string} phone The phone number of the User
+         */
+        { name: 'phone', type: 'string' },
+<span id='PIT_CP-model-User-property-password'>        /**
+</span>         * @property {string} password The password of the user. *This should only
+         * be present when password is being changed. This isn't returned from the 
+         * server*
+         */
+        { name: 'password', type: 'string' },
+<span id='PIT_CP-model-User-property-datecreated'>        /**
+</span>         * @property {Date} datecreated The date the User was created
+         */
+        { name: 'datecreated', type: 'date' },
+<span id='PIT_CP-model-User-property-dateupdated'>        /**
+</span>         * @property {Date} dateupdated The date the User was last updated
+         */
+        { name: 'dateupdated', type: 'date' }
+
+    ]
+});
+</pre>
+</body>
+</html>

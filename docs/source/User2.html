@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='PIT_CP-view-User'>/**
+</span> * The user profile screen. Provides the form necessary for a user to edit their
+ * account info and change their password.  
+ * {@img shots/user-profile.png User Profile}
+ */
+Ext.define(&quot;PIT_CP.view.User&quot;, {
+    extend: 'Ext.Panel',
+    alias:'widget.profile',
+<span id='PIT_CP-view-User-cfg-title'>    title:'Profile',
+</span><span id='PIT_CP-view-User-cfg-layout'>    layout:'vbox',
+</span><span id='PIT_CP-view-User-cfg-defaults'>    defaults:{
+</span>        width:'100%'
+    },
+<span id='PIT_CP-view-User-property-items'>    items:[{
+</span>		xtype:'form',
+		bodyPadding:10,
+		
+		title:'User Information',
+		items:[{
+			xtype:'fieldset',
+			defaultType:'textfield',
+			title:'Basic Information',
+			items:[{
+				fieldLabel:'User Id',
+				name:'user_id',
+				readOnly:true,
+				hidden:true
+			},{
+				fieldLabel:'First Name',
+				name:'fname'
+			},{
+				fieldLabel:'Last Name',
+				name:'lname'
+			},{
+				fieldLabel:'Email Address',
+				name:'email',
+	            vtype:'email'
+			},{
+				fieldLabel:'Phone Number',
+				name:'phone'
+			}]
+		},{
+			xtype:'fieldset',
+			title:'Change Password',
+			defaultType:'textfield',
+			items:[{
+				fieldLabel:'New Password',
+				name:'password',
+	            inputType:'password'
+			},{
+				fieldLabel:'Confirm New Password',
+				name:'confirmNewPass',
+	            vtype:'confirmpassword',            
+	            inputType:'password'
+			}]
+		},{
+			xtype:'fieldset',
+			items:[{
+				xtype:'textfield',
+				fieldLabel:'Current Password',
+				name:'current_password',
+				inputType:'password',
+				allowBlank:false
+			}]
+		},{
+			xtype:'button',
+			text:'Update Information',
+            action:'updateUserInfo',
+            ui:'bootstrap-success'
+		}]
+
+	}],
+<span id='PIT_CP-view-User-method-initComponent'>    initComponent:function(){
+</span>    	var me = this;
+
+        Ext.apply(Ext.form.field.VTypes,{
+            confirmpassword:function(val, field){
+                var values = field.up('form').getValues();
+                return val == values.password;
+            },
+            confirmpasswordText:'Your passwords do not match'
+        });
+
+    	me.callParent(arguments);
+    },
+<span id='PIT_CP-view-User-method-loadUser'>    /**
+</span>     * Loads a user record into the form
+     * @param  {PIT_CP.model.User} user The user to be edited
+     */
+    loadUser:function(user){
+    	this.down('form').loadRecord(user);
+    },
+
+<span id='PIT_CP-view-User-method-clearCurrentPassword'>    /**
+</span>     * Clears the current password from the form
+     */
+    clearCurrentPassword:function(){
+    	this.down('textfield[name=current_password]').setValue('');
+    }
+});</pre>
+</body>
+</html>

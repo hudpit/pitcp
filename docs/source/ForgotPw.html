@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='PIT_CP-view-ForgotPw'>/**
+</span> * The screen for a user to reset their password by having the server
+ * send off an email containing a reset link.
+ * {@img shots/login.png Login}
+ */
+Ext.define('PIT_CP.view.ForgotPw',{
+	extend:'Ext.panel.Panel',
+	alias:'widget.forgotpw',
+	config:{
+<span id='PIT_CP-view-ForgotPw-cfg-items'>		items:[{
+</span>            xtype:'form',
+            title:'Forgot Password',
+            layout:'vbox',
+            items:[{
+                xtype:'fieldset',
+                border:false,
+                margin:5,
+                layout:'anchor',
+                defaults:{
+                    xtype:'textfield',
+                    anchor:'100%',
+                    labelWidth:200
+                },                
+                items:[{
+                    name:'email',
+                    fieldLabel:'Email'
+                }]
+            },{
+            	xtype:'fieldset',
+            	border:false,
+            	layout:'fit',
+            	items:[{
+	            	xtype:'button',
+	            	text:'Send Reset Link',
+	            	action:'sendResetLink',
+                    ui:'bootstrap-success'
+            	}]
+            }]      
+		}]
+	}
+});</pre>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='PIT_CP-store-NavStore'>/**
+</span> * ##Overview
+ * A {@link Ext.data.TreeStore} to load the navigation view from the server.
+ */
+Ext.define('PIT_CP.store.NavStore',{
+    extend:'Ext.data.TreeStore',
+    config:{
+<span id='PIT_CP-store-NavStore-cfg-fields'>        fields:[
+</span>            {name:'text', type:'string'},
+            {name:'xtype', type:'string'}
+        ],
+<span id='PIT_CP-store-NavStore-cfg-root'>        root:{
+</span>            expanded:true,
+            text:'Navigation',
+            children:[
+                {text:'Regions',xtype:'projects',leaf:true,icon:'resources/images/icons/glyphicons_020_home.png'},
+                {text:'Datastores',xtype:'datastores',leaf:true, icon:'resources/images/icons/glyphicons_463_server.png'},
+                {text:'Profile',xtype:'profile',leaf:true, icon:'resources/images/icons/glyphicons_003_user.png'}
+            ]
+        }        
+    }    
+});</pre>
+</body>
+</html>

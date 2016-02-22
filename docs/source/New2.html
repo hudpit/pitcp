@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='PIT_CP-view-project-New'>/**
+</span> * A view containing the form to create a new {@link PIT_CP.model.Project}.
+  * {@img shots/add-region.png New Project}
+ */
+Ext.define('PIT_CP.view.project.New',{
+	extend:'Ext.form.Panel',
+	alias:'widget.newProject',
+<span id='PIT_CP-view-project-New-cfg-layout'>	layout:'vbox',
+</span><span id='PIT_CP-view-project-New-cfg-defaults'>	defaults:{
+</span>		width:'100%'
+	},
+<span id='PIT_CP-view-project-New-property-items'>	items:[{
+</span>		flex:1,
+		xtype:'fieldset',
+		layout:'anchor',
+		items:[{
+			fieldLabel:'Title',
+			name:'project_title',
+			xtype:'textfield'
+		},{
+			fieldLabel:'Datastore',
+			xtype:'combo',
+			name:'datastore_id',
+			store:'Datastores',
+			displayField:'datastore_title',
+			valueField:'datastore_id'
+		},{
+			xtype:'label',
+			html:'&lt;a class=&quot;newDs&quot; href=&quot;#&quot;&gt;Create New Datastore&lt;/a&gt;'
+		}]
+	}],
+<span id='PIT_CP-view-project-New-cfg-bbar'>	bbar:[{text:'Add Region',action:&quot;saveNewProject&quot;,ui:'bootstrap-primary'}],
+</span><span id='PIT_CP-view-project-New-method-initComponent'>	initComponent:function(){
+</span>		var me = this;
+
+		me.addListener({
+			element:'el',
+			click:function(e, btn){me.fireEvent('linkclick', this)},
+			delegate:'a.newDs'
+		})
+		me.callParent(arguments)
+	}
+})</pre>
+</body>
+</html>

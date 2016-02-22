@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='PIT_CP-view-Project'>/**
+</span> * The main Project view, which is loaded into the mainContainer of {@link PIT_CP.view.Main}
+ */
+Ext.define(&quot;PIT_CP.view.Project&quot;, {
+    extend: 'Ext.tab.Panel',
+    alias:'widget.projects',
+<span id='PIT_CP-view-Project-cfg-title'>    title:'Regions',
+</span><span id='PIT_CP-view-Project-cfg-layout'>    layout:'fit',
+</span><span id='PIT_CP-view-Project-property-items'>    items:[{
+</span>		xtype:'panel',
+		title:'All Regions',
+		itemId:'mainProjectList',
+		tbar:[
+			{text:'Add Region',action:'newProject',ui:'bootstrap-primary'}
+		],
+		layout:'fit',
+		items:[{
+			xtype:'projectlist'
+		}]    	
+    }],
+<span id='PIT_CP-view-Project-method-initComponent'>    initComponent:function(){
+</span>    	var me = this;
+
+    	me.callParent(arguments);
+    }
+});</pre>
+</body>
+</html>

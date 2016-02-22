@@ -1,0 +1,3 @@
+<cfscript>
+	application.api.url = "https://controlpanel.pointintime.info/rest/pit";
+</cfscript>

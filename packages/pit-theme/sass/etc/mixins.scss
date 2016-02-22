@@ -1,0 +1,123 @@
+@mixin bootstrap-button-ui(
+    $ui,
+
+    $background-color:$primary,
+    $background-color-over: mix(#000, $background-color, 25),
+    $background-color-focus: mix(#000, $background-color, 25),
+    $background-color-pressed: mix(#000, $background-color, 25),
+    $background-color-disabled: transparent,
+
+    $border-radius: 4px,
+    $border-width: 1px,
+
+    $border-color: mix(#000, $background-color, 15),
+    $border-color-over: mix(#000, $background-color-over, 15),
+    $border-color-focus: mix(#000, $background-color-focus, 15),
+    $border-color-pressed: mix(#000, $background-color-pressed, 15),
+    $border-color-disabled: transparent,
+
+    $padding: 4px,
+    $text-padding: $button-small-text-padding,
+
+
+
+    $background-gradient: null,
+    $background-gradient-over: null,
+    $background-gradient-focus: null,
+    $background-gradient-pressed: null,
+    $background-gradient-disabled: null,
+
+    $color: #fff,
+    $color-over: $color,
+    $color-focus: $color,
+    $color-pressed: $color,
+    $color-disabled: $color,
+
+    $font-size: $button-small-font-size,
+    $font-size-over: $button-small-font-size-over,
+    $font-size-focus: $button-small-font-size-focus,
+    $font-size-pressed: $button-small-font-size-pressed,
+    $font-size-disabled: $button-small-font-size-disabled,
+
+    $font-weight: $button-small-font-weight,
+    $font-weight-over: $button-small-font-weight-over,
+    $font-weight-focus: $button-small-font-weight-focus,
+    $font-weight-pressed: $button-small-font-weight-pressed,
+    $font-weight-disabled: $button-small-font-weight-disabled,
+
+    $font-family: $button-small-font-family,
+    $font-family-over: $button-small-font-family-over,
+    $font-family-focus: $button-small-font-family-focus,
+    $font-family-pressed: $button-small-font-family-pressed,
+    $font-family-disabled: $button-small-font-family-disabled,
+
+    $icon-size: $button-small-icon-size,
+    $glyph-color: $button-toolbar-glyph-color,
+    $glyph-opacity: $button-toolbar-glyph-opacity,
+    $arrow-width: $button-small-arrow-width,
+    $arrow-height: $button-small-arrow-height,
+    $split-width: $button-small-split-width,
+    $split-height: $button-small-split-height,
+
+    $opacity-disabled: $button-toolbar-opacity-disabled,
+    $inner-opacity-disabled: $button-toolbar-inner-opacity-disabled
+
+){
+	@include extjs-button-ui(
+    $ui,
+    $border-radius,
+    $border-width,
+    $border-color,
+    $border-color-over,
+    $border-color-focus,
+    $border-color-pressed,
+    $border-color-disabled,
+    $padding,
+    $text-padding,
+    $background-color,
+    $background-color-over,
+    $background-color-focus,
+    $background-color-pressed,
+    $background-color-disabled,
+    $background-gradient,
+    $background-gradient-over,
+    $background-gradient-focus,
+    $background-gradient-pressed,
+    $background-gradient-disabled,
+
+    $color,
+    $color-over,
+    $color-focus,
+    $color-pressed,
+    $color-disabled,
+
+    $font-size,
+    $font-size-over,
+    $font-size-focus,
+    $font-size-pressed,
+    $font-size-disabled,
+
+    $font-weight,
+    $font-weight-over,
+    $font-weight-focus,
+    $font-weight-pressed,
+    $font-weight-disabled,
+
+    $font-family,
+    $font-family-over,
+    $font-family-focus,
+    $font-family-pressed,
+    $font-family-disabled,
+
+    $icon-size,
+    $glyph-color,
+    $glyph-opacity,
+    $arrow-width,
+    $arrow-height,
+    $split-width,
+    $split-height,
+
+    $opacity-disabled,
+    $inner-opacity-disabled: $button-toolbar-inner-opacity-disabled
+	);
+}

@@ -1,0 +1,13 @@
+{
+    "--title": "Point In Time Control Panel Documentation",
+    "--output": "docs",
+    "--verbose": true,
+    "--ext-namespaces": "Ext,PIT_CP",
+    "--": [
+        "ext/src",
+        "app.js",
+        "app"
+    ],
+    "--guides": "guides.json",
+    "--images":"images"
+}

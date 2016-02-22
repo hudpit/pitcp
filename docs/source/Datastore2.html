@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='PIT_CP-view-Datastore'>/**
+</span> * Main datastore view. This panel will be placed in the mainContainer of
+ * {@link PIT_CP.view.Main}.
+ */
+Ext.define(&quot;PIT_CP.view.Datastore&quot;, {
+    extend: 'Ext.Panel',
+    alias:'widget.datastores',
+<span id='PIT_CP-view-Datastore-cfg-title'>    title:'Datastore',
+</span><span id='PIT_CP-view-Datastore-cfg-layout'>    layout:'fit',
+</span><span id='PIT_CP-view-Datastore-cfg-tbar'>    tbar:[{
+</span>    	text:'Add New Datastore',
+    	action:'addNewDatastore',
+        ui:'bootstrap-primary'
+    }],
+<span id='PIT_CP-view-Datastore-property-items'>    items:[{
+</span>    	xtype:'datastorelist'
+    }]
+});</pre>
+</body>
+</html>

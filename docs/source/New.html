@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='PIT_CP-view-datastore-New'>/**
+</span> * A view to create a new datastore. Contains all validation necessary to ensure
+ * a properly formatted datastore is submitted.
+ * {@img shots/add-datastore.png Add Datastore}
+ */
+Ext.define('PIT_CP.view.datastore.New',{
+	extend:'Ext.form.Panel',
+	alias:'widget.newDatastore',
+<span id='PIT_CP-view-datastore-New-cfg-layout'>	layout:'vbox',
+</span><span id='PIT_CP-view-datastore-New-cfg-defaults'>	defaults:{
+</span>		width:'100%'
+	},
+<span id='PIT_CP-view-datastore-New-property-items'>	items:[{
+</span>		flex:1,
+		xtype:'fieldset',
+		layout:'anchor',
+		items:[{
+			fieldLabel:'Title',
+			name:'datastore_title',
+			xtype:'textfield',
+			allowBlank:false,
+			vtype:'datastoreTitle'
+		},{
+			fieldLabel:'URL',
+			xtype:'textfield',
+			name:'datastore_url',
+			vtype:'surl',
+			emptyText:'https://',
+			allowBlank:false
+		}]
+	}],
+<span id='PIT_CP-view-datastore-New-cfg-bbar'>	bbar:[{text:'Add Datastore',action:&quot;saveNewDatastore&quot;,ui:'bootstrap-primary'}],
+</span><span id='PIT_CP-view-datastore-New-method-initComponent'>	initComponent:function(){
+</span>		var me = this;
+
+		var surl = /((^https):\/\/((([\-\w]+\.)+\w{2,3}(\/[%\-\w]+(\.\w{2,})?)*(([\w\-\.\?\\\/+@&amp;#;`~=%!]*)(\.\w{2,})?)*))\/?)/i;
+
+		Ext.apply(Ext.form.field.VTypes, {
+			surl:function(val, field){
+				return surl.test(val);
+			},
+			surlText:'This field should be a Secure URL in the format &quot;https:/'+'/www.example.com&quot;'
+		});
+
+		Ext.apply(Ext.form.field.VTypes,{
+			datastoreTitle:function(val, field){
+				return val.trim().length &gt; 0;
+			},
+			datastoreTitleText:'This field must not be blank'
+		});
+		me.callParent(arguments);
+	}
+});</pre>
+</body>
+</html>

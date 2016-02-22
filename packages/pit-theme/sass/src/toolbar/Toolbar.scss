@@ -1,0 +1,27 @@
+
+/*
+@include extjs-toolbar-ui(
+	$ui:'border',
+	$background-color: $light-gray
+);
+*/
+
+div.topbar{
+	/*background: #FFF !important;*/
+	color:#fff;
+	background-image:theme-background-image('topbar-background');
+}
+div.topbar a.logo{
+	position:absolute;
+	top:0;
+	left:0;
+	background-size:62px;
+	background-image:theme-background-image('logo');	
+	background-repeat:no-repeat;
+	background-position: center;
+	width:62px;
+	height:62px;
+}
+div.topbar h1{
+	padding-left:70px;
+}

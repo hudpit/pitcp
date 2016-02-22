@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='PIT_CP-model-Project'>/**
+</span> * ##Overview
+ * The Project model. Note that a Project is another name for a Region.
+ *  
+ * **Examples:** Boston PIT 2015, NH 2015, etc.
+ */
+Ext.define('PIT_CP.model.Project', {
+    extend: 'Ext.data.Model',
+    
+<span id='PIT_CP-model-Project-property-fields'>    fields: [
+</span><span id='PIT_CP-model-Project-property-project_id'>        /**
+</span>         * @property {number} project_id The primary key of the Project
+         */
+        { name: 'project_id', type: 'int',useNull:true },
+<span id='PIT_CP-model-Project-property-project_title'>        /**
+</span>         * @property {string} project_title The title of the Project
+         */
+        { name: 'project_title', type: 'string'},
+<span id='PIT_CP-model-Project-property-setup_key'>        /**
+</span>         * @property {string} setup_key The setup key of the Project. This key 
+         * is used to help a user associate themselves to a Project
+         */
+        { name: 'setup_key', type: 'string' },
+<span id='PIT_CP-model-Project-property-user_id'>        /**
+</span>         * @property {number} user_id The id of the {@link PIT_CP.model.User} that 
+         * created the Project
+         */
+        { name: 'user_id', type: 'int' },
+<span id='PIT_CP-model-Project-property-datastore_id'>        /**
+</span>         * @property {number} datastore_id The id of the {@link PIT_CP.model.Datastore}
+         * the Project is linked to
+         */
+        { name: 'datastore_id', type: 'int',useNull:true },
+<span id='PIT_CP-model-Project-property-datecreated'>        /**
+</span>         * @property {Date} datecreated The date the Project was created
+         */
+        { name: 'datecreated', type: 'date' },
+<span id='PIT_CP-model-Project-property-dateupdated'>        /**
+</span>         * @property {Date} dateupdated The date the Project was last updated
+         */
+        { name: 'dateupdated', type: 'date' }
+
+    ],
+<span id='PIT_CP-model-Project-cfg-idProperty'>    idProperty:'project_id',
+</span><span id='PIT_CP-model-Project-property-sorters'>    sorters:['datecreated']
+</span>});
+
+</pre>
+</body>
+</html>

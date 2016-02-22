@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='PIT_CP-view-Viewport'>/**
+</span> * The Main Viewport. This occupies the entire browser window, and {@link PIT_CP.view.Main} 
+ * sits inside this
+ */
+Ext.define('PIT_CP.view.Viewport', {
+    extend: 'Ext.container.Viewport',
+    requires:[
+        'Ext.layout.container.Fit',
+        'PIT_CP.view.Main'
+    ],
+
+<span id='PIT_CP-view-Viewport-cfg-layout'>    layout: {
+</span>        type: 'fit'
+    },
+
+<span id='PIT_CP-view-Viewport-property-items'>    items: [{
+</span>        xtype: 'mainview'
+    }]
+});
+</pre>
+</body>
+</html>
