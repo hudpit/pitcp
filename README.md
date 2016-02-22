@@ -5,7 +5,7 @@ PIT Control Panel
 
 ### Getting Started ###
 
-**All documentation can be found on the [Documentation Page](simtechsolutions.github.io/pit_controlpanel/docs)**
+**All documentation can be found on the [Documentation Page](http://simtechsolutions.github.io/pit_controlpanel/docs)**
 
 
 ### Release Notes ###
